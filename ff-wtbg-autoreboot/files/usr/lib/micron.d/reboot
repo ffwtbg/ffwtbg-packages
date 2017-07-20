@@ -1,1 +1,1 @@
-0 0 * * 3  sleep 70 && touch /etc/banner && /usr/bin/reboot.sh
+0 0 * * 3  /usr/bin/reboot.sh
