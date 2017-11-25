@@ -1,7 +1,6 @@
 #!/bin/sh
 
-#model=$(lua -e 'print(require("platform_info").get_image_name())') # spukt routermodell aus
-model="tp-link-tl-wr841n-nd-v11"
+model=$(lua -e 'print(require("platform_info").get_image_name())') # spukt routermodell aus
 logger -s -t "ffwtbg-autoreboot" -p 5 "router-Modell: $model"
 
 revar=$(cat dailyrebootlist.txt |grep $model)
