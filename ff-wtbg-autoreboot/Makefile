@@ -1,17 +1,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ff-wtbg-autoreboot
-PKG_VERSION:=1
+PKG_VERSION:=2
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
-include $(GLUONDIR)/include/package.mk
+include $(TOPDIR)/../package/gluon.mk
 
 define Package/ff-wtbg-autoreboot
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=reboot the nodes once a Week
-  DEPENDS:=
+  DEPENDS:=+gluon-core +micrond
 endef
 
 define Package/ff-wtbg-autoreboot/description
