@@ -1,1 +1,1 @@
-@reboot /usr/bin/remove_offlinessid.sh
+0 1 * * * /usr/bin/remove_offlinessid.sh
