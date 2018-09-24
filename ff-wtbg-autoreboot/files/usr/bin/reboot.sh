@@ -2,11 +2,11 @@
 model=$(lua -e 'print(require("platform_info").get_image_name())') # spukt routermodell aus
 logger -s -t "ffwtbg-autoreboot" -p 5 "router-Modell: $model"
 # auf auschluss vom reboot prüfen:
-revar=$(cat noreboot.txt |grep $model)
+revar=$(cat /usr/bin/noreboot.txt |grep $model)
 if [ -z "$revar" ];
 	then
 		#kein auschluss, auf täglichen reboot prüfen
-		revar=$(cat dailyrebootlist.txt |grep $model)
+		revar=$(cat /usr/bin/dailyrebootlist.txt |grep $model)
 		if [ -z "$revar" ];
 			then
 			logger -s -t "ffwtbg-autoreboot" -p 5 "weeklyreboot"
