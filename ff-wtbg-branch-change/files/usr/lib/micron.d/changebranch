@@ -1,1 +1,1 @@
-@reboot /usr/bin/branch-change.sh
+@reboot /usr/bin/changebranch.sh
