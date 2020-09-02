@@ -1,24 +1,37 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ff-wtbg-branch-change
-PKG_VERSION:=1
+PKG_VERSION:=2
+
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
 include $(TOPDIR)/../package/gluon.mk
 
-define Package/$(PKG_NAME)
+define Package/ff-wtbg-branch-change
   SECTION:=gluon
   CATEGORY:=Gluon
-  TITLE:=sets snapshot update-branch to experimental
+  TITLE:=change update branch from snapshot to experimental
   DEPENDS:=+gluon-core +micrond
+endef
+
+define Package/ff-wtbg-branch-change/description
 endef
 
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
 endef
 
-define Package/$(PKG_NAME)/install
+define Build/Configure
+endef
+
+define Build/Compile
+endef
+
+define Package/ff-wtbg-branch-change/install
 	$(CP) ./files/* $(1)/
 endef
 
-$(eval $(call BuildPackage,$(PKG_NAME)))
+define Package/ff-wtbg-branch-change/postinst
+endef
+
+$(eval $(call BuildPackage,ff-wtbg-branch-change))
