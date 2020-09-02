@@ -34,4 +34,4 @@ endef
 define Package/ff-wtbg-branch-change/postinst
 endef
 
-$(eval $(call BuildPackage,ff-wtbg-sendtostable))
+$(eval $(call BuildPackage,ff-wtbg-branch-change))
