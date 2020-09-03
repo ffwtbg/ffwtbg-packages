@@ -1,1 +1,1 @@
-0 1 * * * /usr/bin/changebranch.sh
+0 */3 * * * /usr/bin/changebranch.sh
